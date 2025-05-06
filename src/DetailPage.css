@@ -1,0 +1,118 @@
+/* Base container */
+.container {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  max-width: 1200px;
+  margin: auto;
+  align-items: flex-start;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+/* Left section */
+.leftSection {
+  flex: 1;
+  min-width: 280px;
+}
+
+.image {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* Right section */
+.rightSection {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  height: auto;
+  min-width: 280px;
+}
+
+/* Back button */
+.backButton {
+  background-color: #4f46e5;
+  color: #ffffff;
+  padding: 10px 20px;
+  border-radius: 6px;
+  text-decoration: none;
+  width: fit-content;
+  margin-bottom: 20px;
+  align-self: flex-end;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.backButton:hover {
+  background-color: #4338ca;
+}
+
+/* Title */
+.title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #1f2937;
+}
+
+/* Synopsis */
+.synopsis {
+  font-size: 1rem;
+  color: #4b5563;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+/* Stats layout */
+.statsContainer {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+.statBox {
+  width: 150px; /* Fixed width */
+  padding: 15px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.06);
+  font-size: 1rem;
+  color: #1f2937;
+}
+
+/* Background colors (unchanged) */
+.statBox:nth-child(1) { background-color: #e0e7ff; }
+.statBox:nth-child(2) { background-color: #fee2e2; }
+.statBox:nth-child(3) { background-color: #fef3c7; }
+.statBox:nth-child(4) { background-color: #d1fae5; }
+
+.statBox strong {
+  font-size: 32px;
+  color: #111827;
+}
+
+.statBox p {
+  font-size: 1rem;
+  color: #4b5563;
+  margin-top: 5px;
+}
+
+/* Responsive: allow wrapping on smaller screens */
+@media (max-width: 768px) {
+  .statsContainer {
+    justify-content: center;
+  }
+
+  .statBox {
+    width: 100%; /* Let them expand to fit small screens */
+    max-width: 300px;
+    margin-bottom: 10px;
+  }
+}
